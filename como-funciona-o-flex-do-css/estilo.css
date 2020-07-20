@@ -1,0 +1,67 @@
+.container{
+	display: flex;
+	background: aliceblue;
+	height: 500px;
+	
+	flex-direction: row;
+	/*
+	*Valores possiveis para flex-direction:
+	**row *(padrao)
+	*colums
+	*row-reverse
+	*column-reverse
+	*/
+	
+	flex-wrap: nowrap;
+	/*
+	*Valores para flex-wrap:
+	*no-wrap *(padrao)
+	*wrap
+	*wrap-reverse
+	*/
+	
+	flex-flow: row wrap;
+	/*
+	*Valores para flex-flow:
+	* #flex-direction #flex-wrap
+	*/
+	
+	justify-content: flex-start;
+	/*
+	*Valores para justufy-content:
+	*flex-start
+	*flex-end
+	*center
+	*space-between
+	*space-around
+	*/
+	
+	align-items:stretch;
+	/*
+	*Valores para align-items:
+	*stretch *(padrao)
+	*flex-end
+	*flex-start
+	*center
+	*baseline
+	*/
+	
+	align-content: stretch;
+	/*
+	*Valores para align-content:
+	*stretch *(padrao)
+	*flex-start
+	*flex-end
+	*center
+	*space-between
+	*space-around
+	*/
+	
+}
+.article{
+	color: blue;
+	padding: 10px;
+	margin: 5px;
+	background: gray;
+	width:100px;
+}

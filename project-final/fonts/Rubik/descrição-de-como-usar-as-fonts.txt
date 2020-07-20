@@ -1,0 +1,2 @@
+Para usar estas fontes deverá converte-lás para o formato woff out otf. Para isso existem conversores online gratuitos, apenas pequise por, "ttf convert to woff". Obrigado.
+Edilson A. Cuamba © 2020

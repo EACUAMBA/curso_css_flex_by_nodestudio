@@ -1,0 +1,41 @@
+.articles{
+	background-color: aliceblue;
+	height: 500px;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
+	
+}
+
+.articles .article{
+	background-color: CornflowerBlue;
+	margin: 5px;
+	/*flex-grow: 0;*/
+}
+
+.articles .article-01{
+	background-color: chartrouse;
+	order: 5;
+	flex-basis: 100%;
+}
+
+.articles .article-02{
+	background-color: coral;
+	order: 4;
+	/*flex-grow: 1;*/
+}
+.articles .article-03{
+	background-color: cyan;
+	order: 3;
+}
+.articles .article-04{
+	background-color: crimson;
+	order: 2;
+}
+.articles .article-05{
+	background-color: chocolate;
+	order: 1;
+	align-self: center;
+	/*flex-grow: 1;*/
+	
+}

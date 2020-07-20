@@ -1,0 +1,430 @@
+/*
+*Begin
+*RESET CSS
+*/
+*{
+	margin:0;
+	padding: 0; 
+	font-size: 100%; /* Como vamos trabalhar com unidades de medida relaiva para representar as fonts, o em é relativo ao body, nesse caso, 100% do body */
+	box-sizing: border-box;/* Para não problemas com os paddings */
+	font-family: 'Rubik', sans-serif;
+}
+
+ul{
+	list-style:none; /* Estilo da lista, é nenhum*/
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.9; /* o quanto vai ser opaco, sem cor*/
+}
+a:hover{
+	opacity: 1;
+}
+/*
+*RESET CSS
+*End
+*/
+
+
+/*
+*Begin
+* Header
+* Cabeçalho: Logo e Menu
+*/
+header{
+	background: khaki;
+	width: 100%;
+	position: absolute; /* Colocamos o header como absolute em relacao ao body porque queremos que no fututro ele fique por cima do efeito hero */
+	top: 0;
+	left: 0;
+	display: flex; /* Para trabalharmos no alinhamento */
+	justify-content: space-between; /* adicionamos um espaámento entre os objectos com justify-content: space-between */
+	align-items: center; /* Adicionar um alinhamento vertical | up and down, o conteudo do objecto ficara no centro*/
+	padding: 20px 50px; /* 20px top and bottom, 50px right and left */
+}
+
+/* Tratando a imagem do Header*/
+header img{
+	width: 200px;/* Largura da imagem*/
+}
+
+/* Tratando a lista do menu*/
+header nav ul{
+	display: flex; /* Para deixar o menu em linha horizontal */
+}
+header nav ul li a{
+	color: #191c03; /* Cor do links do menu */
+}
+header nav ul li{
+	margin: 0 15px; /* Adicionar espaçamento entre as li(elementos do ul), ele vai adicionar do lado esquerdo e direito o espaço, infelizmento o primeiro item não deve ter e o ultimo item também, entao vamos selecionar o útimo item e o primeiro e depois remover os espaços */
+}
+header nav ul li:first-child{/*Usamos o :first-child para selecionar o primeiro filho o objecto; */
+	margin-left: 0; 
+}
+header nav ul li:last-child{ /*Usamos o :last-child para selecionar o último filho do objecto */
+	margin-right: 0;
+}
+/*
+* Header
+* End
+*/
+
+/*
+* Begin
+* Hero
+* Hero e o texto no centro
+*/
+.hero{
+	background-image: url(../img/hero.jpg); /* O fundo será a imagem que queremos colocar no hero */
+	background-size: cover; /* Esta proprindade é usada quando queremos cobrir todo o interior do elemento, mesmo se tiver mos de esticar(stretch the) a imagem ou tivermos de cortar algumas bordas da imagem. */
+	min-height: 100vh; /* 100vh é equivalente a 100% mas é relativa a altura do container nesse caso VH = viewport height*/
+	color: #fff;
+	text-align: center;
+	display: flex; /**/
+	justify-content: center; /* faz o alinhamento horizontal */
+	align-items: center;/* Faz o alinhamento vertical */ 
+	flex-direction: column; /* Fez com que o <h1>, <h3> e <a> fossem renderizados, programados, organizados em colunas. um em cima do outro. */
+}
+.hero h1{
+	font-size: 3.2rem; 
+	margin-bottom: 15px;
+}
+.hero h3{
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+.hero .btn{
+	background-color: #fff;
+	border-radius: 4px; /* Bordas aredondadas */
+	color: #191c03;
+	padding: 20px 50px;
+	text-transform: uppercase;
+}
+/*
+* Hero
+* Hero e o texto no centro
+* End
+*/
+
+
+/*
+* Begin
+* Hotel
+* Conheça o Hotel
+*/
+.conheca-o-hotel{
+	display: flex; /**/
+	flex-direction: column; /* Para o browser renderizar em coluna um em cima do outro */
+	align-items: center; /*Para os elementos ficarem no centro na linha horizontal*/
+	padding: 100px 50px;
+}
+.conheca-o-hotel h3{
+	color: #191c03;
+	font-size: 2rem;
+	margin-bottom: 35px;
+	text-align: center;
+}
+.conheca-o-hotel p{
+	color: #191c03;
+	text-align: center;
+	max-width: 800px; /* Define a largura maxima do elemento, se a alargura for maior que a alargura maxiam definida entao o elemento vai ganhar altura(height) se for menor a propriedade não tera efeito. */
+	margin-bottom: 35px;
+}
+.conheca-o-hotel hr{
+	width: 200px;
+	height: 2px;
+	background-color: #191c03;
+	margin-bottom: 70px;
+	border: none;
+}
+
+.conheca-o-hotel ul.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap; /*Permitir a quebra de tela, é como se dissessimos ao browser, embrulha o conteudo como ele deve ficar. */
+}
+.conheca-o-hotel ul.grid li{
+	height: 350px;
+	padding: 20px;
+	border-radius: 4px;
+	background-clip: content-box; /* Especifica quão distante o background deve fazer dentro do objecto, podendo ser est border-box(valor padrão) este defini que o funco deve ficar por de tras da borda, tem o padding-box este define que o conteúdo deva ficar dentro da borda, no devera alcançar a borda, te por último o content-box este define que o fundo somente fique por detras do conteudo enao do objecto inteiro, nexte caso se o elemento tiver padding o fundo nao afectara o padding  */
+	background-size: cover; /* Esta proprindade é usada quando queremos cobrir todo o interior do elemento, mesmo se tiver mos de esticar(stretch the) a imagem ou tivermos de cortar algumas bordas da imagem. */
+	background-position: center; /* define a posição do fundo dentro do elemtno se ele ira ficar em cima, no lado, centro etc. */
+}
+
+.conheca-o-hotel ul.grid li.small{
+	flex-basis: 40%; /* Estamos definindo a largura(comprimento) inicial do objecto */
+}
+.conheca-o-hotel ul.grid li.large{
+	flex-basis: 60%;/* Estamos definindo a largura(comprimento) inicial do objecto */
+}
+/*
+* Hotel
+* Conheça o hotel
+* End
+*/
+
+/*
+* Begin
+* Section
+* Carateristicas
+*/
+.caracteristicas{
+	background-color: #191c03;
+	display: flex; /**/
+	flex-direction: column; /* Para o browser renderizar em coluna um em cima do outro */
+	align-items: center; /*Para os elementos ficarem no centro na linha horizontal*/
+	padding: 100px 50px;
+}
+.caracteristicas h3{
+	color: #fff;
+	font-size: 2rem;
+	margin-bottom: 35px;
+	text-align: center;
+}
+.caracteristicas p{
+	color: #fff;
+	text-align: center;
+	max-width: 800px; /* Define a largura maxima do elemento, se a alargura for maior que a alargura maxiam definida entao o elemento vai ganhar altura(height) se for menor a propriedade não tera efeito. */
+	margin-bottom: 35px;
+}
+.caracteristicas hr{
+	width: 200px;
+	height: 2px;
+	background-color: #fff;
+	margin-bottom: 70px;
+	border: none;
+}
+
+.caracteristicas ul.grid{
+	width: 100%;
+	display: flex;
+}
+
+.caracteristicas ul.grid li{
+	padding: 0 15px;
+	text-align: center;
+}
+.caracteristicas ul.grid li i{
+	color: #c3c63b;
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+.caracteristicas ul.grid li h4{
+	color: #c3c63b;
+	font-size: 1.5rem;
+	margin-bottom: 30px;
+}
+.caracteristicas ul.grid li p{
+	color: #fff;
+}
+/*
+* End
+* Section
+* Carateristicas
+*/
+
+/*
+* Begin
+* Newaletter
+*/
+.newsletter{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 50px;
+	justify-content: center;
+}
+.newsletter h3{
+	color: #c3c63b;
+	font-size: 2rem;
+	margin-bottom: 35px;
+	text-align: center;
+}
+.newsletter p{
+	color: #c3c63b;
+	text-align: center;
+	max-width: 800px; /* Define a largura maxima do elemento, se a alargura for maior que a alargura maxiam definida entao o elemento vai ganhar altura(height) se for menor a propriedade não tera efeito. */
+	margin-bottom: 35px;
+}
+.newsletter hr{
+	width: 200px;
+	height: 2px;
+	background-color: #c3c63b;
+	margin-bottom: 70px;
+	border: none;
+}
+
+.newsletter form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 80%;
+}
+.newsletter form input{
+	padding: 15px;
+	border: 1px solid #c3c63b;
+	border-radius: 4px;
+	margin-right: 15px;
+	flex: 1;
+}
+
+.newsletter form button{
+	padding: 15px;
+	background-color: #c3c63b;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+}
+/*
+* End
+* Section
+* Newsletter
+*/
+
+
+/*
+* Begin
+* Footer
+*/
+footer{
+	display: flex;
+	flex-direction: column;
+	background-color: #191c03;
+	padding: 50px 0;
+	align-items: center;
+}
+footer ul{
+	display: flex;
+	margin-bottom: 25px;
+}
+footer ul li{
+	margin-right: 10px;
+}
+footer ul li:last-child{
+	margin-right: 0;
+}
+footer ul li a{
+	color: #c3c63b;
+	font-size: 2rem;
+}
+footer p{
+	color: #c3c63b;
+	justify-content: center;
+}
+/*
+* End
+* Section
+* Footer
+*/
+
+
+/*
+* Begin
+* Breakpoint
+*/
+/*Quando atingir 700px será aplicado as regras que estão aqui! */
+@media (max-width: 700px){
+/*
+*Begin
+* Header
+* Cabeçalho: Logo e Menu
+*/
+	header{
+		flex-direction: column; /* Fará os elementos ficarem em coluna, todos os elementos denttro deste containeir ficarão em forma de uma coluna; de cima para baixo */
+	}
+	header a img {
+		margin-bottom: 15px;
+	} 
+/*
+* Header
+* End
+*/
+
+/*
+* Begin
+* Hero
+* Hero e o texto no centro
+*/
+	.hero h1{
+		font-size: 2.5rem;
+	}
+	.hero h3{
+		font-size: 1.5rem;
+	}
+/*
+* End
+* Hero
+* Hero e o texto no centro
+*/
+
+/*
+* Begin
+* Hotel
+* Conheça o Hotel
+*/
+	.conheca-o-hotel ul.grid li.small, .conheca-o-hotel ul.grid li.large{
+		flex-basis: 100%
+	}
+/*
+* Hotel
+* Conheça o hotel
+* End
+*/
+
+/*
+	* Begin
+* Newaletter
+*/
+.newsletter form input{
+	flex-basis: 100%;
+	margin-bottom: 15px;
+}
+
+/*
+* End
+* Section
+* Newsletter
+*/
+
+}
+
+/*
+* Begin
+* BreakPoint
+*/
+
+/*
+* Begin
+* Breakpoint
+*/
+/*Quando atingir 700px será aplicado as regras que estão aqui! */
+@media (max-width: 850px){
+	/*
+* Begin
+* Section
+* Carateristicas
+*/
+.caracteristicas ul.grid{
+	flex-direction: column; /* Mudamos a direção dos item para column, que é de cima para baixo; */
+}
+/*
+* End
+* Section
+* Carateristicas
+*/
+
+
+
+
+
+}
+/*
+* Begin
+* BreakPoint
+*/
